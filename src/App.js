@@ -1,8 +1,8 @@
 import React from 'react';
 
-import Titles from './Titles';
-import Form from './Form';
-import Weather from './Weather';
+import Titles from './components/Titles';
+import Form from './components/Form';
+import Weather from './components/Weather';
 
 const API_kEY = 'ec185cad12e96703c5af4c939d2bedb2';
 
