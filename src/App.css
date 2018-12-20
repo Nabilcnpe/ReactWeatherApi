@@ -18,6 +18,10 @@ h1, p {
   color: #fff
 }
 
+h2 {
+  color: black
+}
+
 .main {
   height: 90vh;
   background: #fff;

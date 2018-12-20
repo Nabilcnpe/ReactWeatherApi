@@ -14,7 +14,7 @@ class Weather extends React.Component {
         </div>
         }
         <div>
-          <h1>{this.props.error}</h1>
+          <h2>{this.props.error}</h2>
         </div>
       </div>
     )
