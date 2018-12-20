@@ -1,10 +1,10 @@
-import React from 'react'
+import React from 'react';
 
-import Titles from './Titles'
-import Form from './Form'
-import Weather from './Weather'
+import Titles from './Titles';
+import Form from './Form';
+import Weather from './Weather';
 
-const API_kEY = 'ec185cad12e96703c5af4c939d2bedb2'
+const API_kEY = 'ec185cad12e96703c5af4c939d2bedb2';
 
 class App extends React.Component {
   state = {
@@ -15,7 +15,7 @@ class App extends React.Component {
     description: undefined,
     error: undefined,
     validate: false
-  }
+  };
 
   getWeather = async (e) => {
     e.preventDefault();
@@ -23,7 +23,6 @@ class App extends React.Component {
     const country = e.target.elements.country.value;
     const api_call = await fetch(`http://api.openweathermap.org/data/2.5/weather?q=${city},${country}&appid=${API_kEY}`);
     const data = await api_call.json();
-    console.log(data);
     if (city && country) {
       this.setState({
         temperature: data.main.temp,
@@ -33,7 +32,7 @@ class App extends React.Component {
         description: data.weather[0].description,
         error: "",
         validate: true
-      })
+      });
     } else {
       this.setState({
         temperature: undefined,
@@ -43,9 +42,9 @@ class App extends React.Component {
         description: undefined,
         error: "Veuillez renseignez les champs !",
         validate: false
-      })
+      });
     }
-  }
+  };
 
   render() {
     return (
